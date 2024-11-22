@@ -1,0 +1,52 @@
+---
+title: "GitHub Desktop: Power Hour"
+subtitle: "Research Data Management, Amsterdam UMC"
+author: "Sam Langton"
+date: "2 December, 2024"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    theme: united
+    toc_float: true
+---
+
+## Preamble
+
+This material is a pilot workshop introducing [GitHub Desktop](https://github.com/apps/desktop) for researchers at [Amsterdam UMC](https://www.amsterdamumc.org/en/research.htm). It is partly based on material produced by [TIB Hannover](https://github.com/TIBHannover/git-desktop). The workshop is a compact, essentials-only session designed to be completed in one hour by students or researchers with zero familiarity with git/GitHub, but some familiarity with R or other programming languages. 
+
+## Version control
+
+In this workshop you will be learning how to use **GitHub Desktop**. This is a point-and-click application that will allow you to use **version control**. Version control is a way of managing changes to code, in our case, R code. Once you've mastered the basics of version control using GitHub Desktop, you will be better able to track changes to your own code, revert to old versions of your scripts, collaborate with others, and avoid the worry of losing your work. At the very least, by the end of this session, you will never again have to use the classic (but deeply shameful) academic file naming system for your R scripts.
+
+<br>
+
+<center>
+
+![](img/versioncontrol.png){width="500"}
+
+</center>
+
+## Why GitHub Desktop?
+
+So, we will be learning GitHub Desktop for version control. You might have heard various terms being thrown around with respect to version control, almost all of which will include the word 'git'. Let's clarify this. **Git** is the software doing the hard work: this is the thing that's tracking changes to your R code. If you really want to, you can download [Git](https://git-scm.com/downloads), go away and use version control without any further tools. 
+
+
+
+
+
+
+Here, we recommend using Git via GitHub Desktop. There are two main reasons to this. First, using GitHub Desktop is one of the easiest and most accessible ways to use Git for version control. It does not require any usage of the command line and it has a pretty good point-and-click user interface. Second, GitHub Desktop -- as the name implies -- is designed to work seamlessly with [github.com](https://github.com/), the largest online platform in the world for sharing and storing code. By using GitHub Desktop, you can not only put your code under version control with minimal effort, but you can also easily share your code with the world and remotely collaborate with your colleagues. There are [alternatives](https://www.wearedevelopers.com/magazine/top-github-alternatives) available, many of which also use Git under the hood.
+
+## Setting up
+
+If you haven't already:
+
+1. [Sign-up](https://github.com/) to GitHub.
+2. [Download](https://github.com/apps/desktop) GitHub Desktop.
+3. Sign-in to your GitHub account within GitHub Desktop.
+4. Download the example R project that we will work with. Unzip it and place the folder somewhere sensible on your local machine. 
+
+## Adding a project to GitHub Desktop
+
+
