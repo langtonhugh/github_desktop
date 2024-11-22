@@ -9,6 +9,8 @@ format:
     toc-depth: 2
     theme: united
     toc_float: true
+editor_options: 
+  chunk_output_type: console
 ---
 
 ## Preamble
@@ -27,25 +29,56 @@ In this workshop you will be learning how to use **GitHub Desktop**. This is a p
 
 </center>
 
+<br>
+
+Rather than getting lost in a sea of nearly-identical files with different names, we can use version control. Version control tools start with a base version of a file -- in this case, an R script -- and then record any changes you make to the script as you go along. This could be deleting old code, editing existing code, or writing new code. At any point, you can revert to an old version or compare two different versions to assess what the differences are between these 'snapshots' of the same R script.
+
+<center>
+
+![](img/play-changes.svg){width="500"}
+
+</center>
+
+Two (or more) collaborators can also independently make different changes to the same R script without worrying about overwriting what one another are doing. Along the way, each change to the script can be given a short description (e.g., "Recode age variable") that helps you differentiate between different snapshots.
+
+<center>
+
+![](img/versions.svg){width="500"}
+
+</center>
+
+And then later on, the two different versions can be merged into the same base R script. 
+
+<center>
+
+![](img/merge.svg){width="500"}
+
+</center>
+
+Used properly, it is impossible to permanently lose work with version control. You will never have to frantically search through Outlook for an R script that you emailed to yourself, or frantically try and 'restore previous version' within Windows. Version control takes care of this for you!
+
+**Self-questions**
+
+- Imagine you have 5 co-authors. How would you manage the changes and comments they make to your paper? If you use Microsoft Word, what happens if you accept changes made using the Track Changes option? Do you have a history of those changes?
+
+- Imagine you want to collaborate on an R script with a colleague. How would you go about this? Email the script back and forth with your changes? Share the script on a Cloud platform (e.g., One Drive, Google Drive)? If one of you made a mistake, deleting some important code, could you easily identify the change and remedy it?
+
 ## Why GitHub Desktop?
 
 So, we will be learning GitHub Desktop for version control. You might have heard various terms being thrown around with respect to version control, almost all of which will include the word 'git'. Let's clarify this. **Git** is the software doing the hard work: this is the thing that's tracking changes to your R code. If you really want to, you can download [Git](https://git-scm.com/downloads), go away and use version control without any further tools. 
 
+Here, we recommend using Git via GitHub Desktop. There are two main reasons to this. First, using GitHub Desktop is one of the easiest and most accessible ways to use Git for version control. It does not require any usage of the command line and it has a pretty good point-and-click user interface. Second, GitHub Desktop -- as the name implies -- works seamlessly with [github.com](https://github.com/), the largest online platform in the world for sharing and storing code. By using GitHub Desktop, you can not only put your code under version control with minimal effort, but you can also easily share your code with the world and remotely collaborate with your colleagues. Even if you work alone, and you do not want to share your code with anyone, [github.com](https://github.com/) can still be used to store your code privately, ensuring that all your versions are backed-up.
 
+There are [alternatives](https://www.wearedevelopers.com/magazine/top-github-alternatives) available, many of which also use Git under the hood, but GitHub has some advantages that means it will likely soon become the standard version control tool at Amsterdam UMC ([Pronk & Geertsma, 2024](https://zenodo.org/records/11065899)).
 
-
-
-
-Here, we recommend using Git via GitHub Desktop. There are two main reasons to this. First, using GitHub Desktop is one of the easiest and most accessible ways to use Git for version control. It does not require any usage of the command line and it has a pretty good point-and-click user interface. Second, GitHub Desktop -- as the name implies -- is designed to work seamlessly with [github.com](https://github.com/), the largest online platform in the world for sharing and storing code. By using GitHub Desktop, you can not only put your code under version control with minimal effort, but you can also easily share your code with the world and remotely collaborate with your colleagues. There are [alternatives](https://www.wearedevelopers.com/magazine/top-github-alternatives) available, many of which also use Git under the hood.
-
-## Setting up
+## Setup
 
 If you haven't already:
 
 1. [Sign-up](https://github.com/) to GitHub.
 2. [Download](https://github.com/apps/desktop) GitHub Desktop.
 3. Sign-in to your GitHub account within GitHub Desktop.
-4. Download the example R project that we will work with. Unzip it and place the folder somewhere sensible on your local machine. 
+4. Download the example R project that we will work with. Unzip it and place the folder somewhere on your local machine. 
 
 ## Adding a project to GitHub Desktop
 

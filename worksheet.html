@@ -50,7 +50,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#preamble" id="toc-preamble" class="nav-link active" data-scroll-target="#preamble">Preamble</a></li>
   <li><a href="#version-control" id="toc-version-control" class="nav-link" data-scroll-target="#version-control">Version control</a></li>
   <li><a href="#why-github-desktop" id="toc-why-github-desktop" class="nav-link" data-scroll-target="#why-github-desktop">Why GitHub Desktop?</a></li>
-  <li><a href="#setting-up" id="toc-setting-up" class="nav-link" data-scroll-target="#setting-up">Setting up</a></li>
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
   <li><a href="#adding-a-project-to-github-desktop" id="toc-adding-a-project-to-github-desktop" class="nav-link" data-scroll-target="#adding-a-project-to-github-desktop">Adding a project to GitHub Desktop</a></li>
   </ul>
 </nav>
@@ -98,20 +98,40 @@ ul.task-list li input[type="checkbox"] {
 <center>
 <p><img src="img/versioncontrol.png" class="img-fluid" width="500"></p>
 </center>
+<p><br></p>
+<p>Rather than getting lost in a sea of nearly-identical files with different names, we can use version control. Version control tools start with a base version of a file – in this case, an R script – and then record any changes you make to the script as you go along. This could be deleting old code, editing existing code, or writing new code. At any point, you can revert to an old version or compare two different versions to assess what the differences are between these ‘snapshots’ of the same R script.</p>
+<center>
+<p><img src="img/play-changes.svg" class="img-fluid" width="500"></p>
+</center>
+<p>Two (or more) collaborators can also independently make different changes to the same R script without worrying about overwriting what one another are doing. Along the way, each change to the script can be given a short description (e.g., “Recode age variable”) that helps you differentiate between different snapshots.</p>
+<center>
+<p><img src="img/versions.svg" class="img-fluid" width="500"></p>
+</center>
+<p>And then later on, the two different versions can be merged into the same base R script.</p>
+<center>
+<p><img src="img/merge.svg" class="img-fluid" width="500"></p>
+</center>
+<p>Used properly, it is impossible to permanently lose work with version control. You will never have to frantically search through Outlook for an R script that you emailed to yourself, or frantically try and ‘restore previous version’ within Windows. Version control takes care of this for you!</p>
+<p><strong>Self-questions</strong></p>
+<ul>
+<li><p>Imagine you have 5 co-authors. How would you manage the changes and comments they make to your paper? If you use Microsoft Word, what happens if you accept changes made using the Track Changes option? Do you have a history of those changes?</p></li>
+<li><p>Imagine you want to collaborate on an R script with a colleague. How would you go about this? Email the script back and forth with your changes? Share the script on a Cloud platform (e.g., One Drive, Google Drive)? If one of you made a mistake, deleting some important code, could you easily identify the change and remedy it?</p></li>
+</ul>
 </section>
 <section id="why-github-desktop" class="level2">
 <h2 class="anchored" data-anchor-id="why-github-desktop">Why GitHub Desktop?</h2>
 <p>So, we will be learning GitHub Desktop for version control. You might have heard various terms being thrown around with respect to version control, almost all of which will include the word ‘git’. Let’s clarify this. <strong>Git</strong> is the software doing the hard work: this is the thing that’s tracking changes to your R code. If you really want to, you can download <a href="https://git-scm.com/downloads">Git</a>, go away and use version control without any further tools.</p>
-<p>Here, we recommend using Git via GitHub Desktop. There are two main reasons to this. First, using GitHub Desktop is one of the easiest and most accessible ways to use Git for version control. It does not require any usage of the command line and it has a pretty good point-and-click user interface. Second, GitHub Desktop – as the name implies – is designed to work seamlessly with <a href="https://github.com/">github.com</a>, the largest online platform in the world for sharing and storing code. By using GitHub Desktop, you can not only put your code under version control with minimal effort, but you can also easily share your code with the world and remotely collaborate with your colleagues. There are <a href="https://www.wearedevelopers.com/magazine/top-github-alternatives">alternatives</a> available, many of which also use Git under the hood.</p>
+<p>Here, we recommend using Git via GitHub Desktop. There are two main reasons to this. First, using GitHub Desktop is one of the easiest and most accessible ways to use Git for version control. It does not require any usage of the command line and it has a pretty good point-and-click user interface. Second, GitHub Desktop – as the name implies – works seamlessly with <a href="https://github.com/">github.com</a>, the largest online platform in the world for sharing and storing code. By using GitHub Desktop, you can not only put your code under version control with minimal effort, but you can also easily share your code with the world and remotely collaborate with your colleagues. Even if you work alone, and you do not want to share your code with anyone, <a href="https://github.com/">github.com</a> can still be used to store your code privately, ensuring that all your versions are backed-up.</p>
+<p>There are <a href="https://www.wearedevelopers.com/magazine/top-github-alternatives">alternatives</a> available, many of which also use Git under the hood, but GitHub has some advantages that means it will likely soon become the standard version control tool at Amsterdam UMC (<a href="https://zenodo.org/records/11065899">Pronk &amp; Geertsma, 2024</a>).</p>
 </section>
-<section id="setting-up" class="level2">
-<h2 class="anchored" data-anchor-id="setting-up">Setting up</h2>
+<section id="setup" class="level2">
+<h2 class="anchored" data-anchor-id="setup">Setup</h2>
 <p>If you haven’t already:</p>
 <ol type="1">
 <li><a href="https://github.com/">Sign-up</a> to GitHub.</li>
 <li><a href="https://github.com/apps/desktop">Download</a> GitHub Desktop.</li>
 <li>Sign-in to your GitHub account within GitHub Desktop.</li>
-<li>Download the example R project that we will work with. Unzip it and place the folder somewhere sensible on your local machine.</li>
+<li>Download the example R project that we will work with. Unzip it and place the folder somewhere on your local machine.</li>
 </ol>
 </section>
 <section id="adding-a-project-to-github-desktop" class="level2">
