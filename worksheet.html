@@ -50,11 +50,17 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#preamble" id="toc-preamble" class="nav-link active" data-scroll-target="#preamble"><span class="header-section-number">1</span> Preamble</a></li>
   <li><a href="#version-control" id="toc-version-control" class="nav-link" data-scroll-target="#version-control"><span class="header-section-number">2</span> Version control</a></li>
   <li><a href="#why-github-desktop" id="toc-why-github-desktop" class="nav-link" data-scroll-target="#why-github-desktop"><span class="header-section-number">3</span> Why GitHub Desktop?</a></li>
-  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise"><span class="header-section-number">4</span> Exercise</a>
+  <li><a href="#solo-exercise" id="toc-solo-exercise" class="nav-link" data-scroll-target="#solo-exercise"><span class="header-section-number">4</span> Solo exercise</a>
   <ul class="collapse">
   <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup"><span class="header-section-number">4.1</span> Setup</a></li>
   <li><a href="#adding-a-project-to-github-desktop" id="toc-adding-a-project-to-github-desktop" class="nav-link" data-scroll-target="#adding-a-project-to-github-desktop"><span class="header-section-number">4.2</span> Adding a project to GitHub Desktop</a></li>
+  <li><a href="#editing-a-script" id="toc-editing-a-script" class="nav-link" data-scroll-target="#editing-a-script"><span class="header-section-number">4.3</span> Editing a script</a></li>
+  <li><a href="#making-a-commit" id="toc-making-a-commit" class="nav-link" data-scroll-target="#making-a-commit"><span class="header-section-number">4.4</span> Making a commit</a></li>
+  <li><a href="#pushing-your-changes" id="toc-pushing-your-changes" class="nav-link" data-scroll-target="#pushing-your-changes"><span class="header-section-number">4.5</span> Pushing your changes</a></li>
+  <li><a href="#pulling-changes-to-the-readme" id="toc-pulling-changes-to-the-readme" class="nav-link" data-scroll-target="#pulling-changes-to-the-readme"><span class="header-section-number">4.6</span> Pulling changes to the README</a></li>
   </ul></li>
+  <li><a href="#collaboration-exercise" id="toc-collaboration-exercise" class="nav-link" data-scroll-target="#collaboration-exercise"><span class="header-section-number">5</span> Collaboration exercise</a></li>
+  <li><a href="#git-ignore" id="toc-git-ignore" class="nav-link" data-scroll-target="#git-ignore"><span class="header-section-number">6</span> Git ignore</a></li>
   </ul>
 </nav>
 </div>
@@ -94,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="preamble" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="preamble"><span class="header-section-number">1</span> Preamble</h2>
-<p>This material is a pilot workshop introducing <a href="https://github.com/apps/desktop">GitHub Desktop</a> for researchers at <a href="https://www.amsterdamumc.org/en/research.htm">Amsterdam UMC</a>. It is partly based on material produced by <a href="https://github.com/TIBHannover/git-desktop">TIB Hannover</a>. The workshop is a compact, essentials-only session designed to be completed in one hour by students or researchers with zero familiarity with git/GitHub, but some familiarity with R or other programming languages.</p>
+<p>This material is a pilot workshop introducing <a href="https://github.com/apps/desktop">GitHub Desktop</a> for researchers at <a href="https://www.amsterdamumc.org/en/research.htm">Amsterdam UMC</a>. It is partly based on material produced by <a href="https://github.com/TIBHannover/git-desktop">TIB Hannover</a>. The workshop is a compact, essentials-only session designed for students or researchers with zero familiarity with git/GitHub, but some familiarity with R.</p>
 </section>
 <section id="version-control" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="version-control"><span class="header-section-number">2</span> Version control</h2>
@@ -104,15 +110,15 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="img/versioncontrol.png" class="img-fluid" width="500"></p>
 </center>
 <p><br></p>
-<p>Rather than getting lost in a sea of nearly-identical files with different names (or even worse, only retaining the latest version) we can use version control. Version control tools start with a base version of a file – in this case, an R script – and then record any changes you make to the script as you go along. This could be deleting old code, editing existing code, or writing new code. At any point, you can revert to an old version or compare two different versions to assess what the differences are between these ‘snapshots’ of the same R script.</p>
+<p>Rather than getting lost in a sea of nearly-identical files with different names (or even worse, only retaining the latest version) we can use version control. Version control tools start with a base version of a file – in this case, an R script – and then record any changes you make to the script as you go along. This could be deleting old code, editing existing code, or writing new code. At any point, you can revert to an old version or compare two different versions to assess what the differences are between these ‘snapshots’ of the same R script. In Git terminology, these snapshots are called <strong>commits</strong>.</p>
 <center>
 <p><img src="img/play-changes.svg" class="img-fluid" width="500"></p>
 </center>
-<p>Two (or more) collaborators can also independently make different changes to the same R script without worrying about overwriting what one another are doing. Along the way, each change to the script can be given a short description (e.g., “Recode age variable”) that helps you differentiate between different snapshots.</p>
+<p>Two (or more) collaborators can also independently make different changes to the same R script without worrying about overwriting what one another are doing. Along the way, each change to the script can be given a short description (e.g., “Recode age variable”) that helps you differentiate between different snapshots (i.e., <strong>commits</strong>)</p>
 <center>
 <p><img src="img/versions.svg" class="img-fluid" width="500"></p>
 </center>
-<p>And then later on, the two different versions can be merged into the same base R script.</p>
+<p>And then later on, the two different versions can be <strong>merged</strong> into the same base R script.</p>
 <center>
 <p><img src="img/merge.svg" class="img-fluid" width="500"></p>
 </center>
@@ -129,8 +135,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Here, we recommend using Git via GitHub Desktop. There are two main reasons to this. First, using GitHub Desktop is one of the easiest and most accessible ways to use Git for version control. It does not require any usage of the command line and it has a pretty good point-and-click user interface. Second, GitHub Desktop – as the name implies – works seamlessly with <a href="https://github.com/">github.com</a>, the largest online platform in the world for sharing and storing code. By using GitHub Desktop, you can not only put your code under version control with minimal effort, but you can also easily share your code with the world and remotely collaborate with your colleagues. Even if you work alone, and you do not want to share your code with anyone, <a href="https://github.com/">github.com</a> can still be used to store your code privately, ensuring that all your versions are backed-up.</p>
 <p>There are <a href="https://www.wearedevelopers.com/magazine/top-github-alternatives">alternatives</a> available, many of which also use Git under the hood, but GitHub has some advantages that means it will likely soon become the standard version control tool at Amsterdam UMC (<a href="https://zenodo.org/records/11065899">Pronk &amp; Geertsma, 2024</a>).</p>
 </section>
-<section id="exercise" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="exercise"><span class="header-section-number">4</span> Exercise</h2>
+<section id="solo-exercise" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="solo-exercise"><span class="header-section-number">4</span> Solo exercise</h2>
 <section id="setup" class="level3" data-number="4.1">
 <h3 data-number="4.1" class="anchored" data-anchor-id="setup"><span class="header-section-number">4.1</span> Setup</h3>
 <p>If you haven’t already:</p>
@@ -147,13 +153,97 @@ ul.task-list li input[type="checkbox"] {
 <center>
 <p><img src="img/project_folder.png" class="img-fluid" width="600"></p>
 </center>
-<p>Open up the R project and the <code>my_analysis.R</code> script in RStudio. If needed, install the packages required to run the script. You don’t actually have to understand or even run the script to follow the exercise, but it will allow you to test things out more if you can get it running.</p>
-<p>Currently, nothing we are doing is under version control. No changes are being tracked. If we delete some R code, it’s probably gone forever, and we cannot easily compare or restore to a previous version. To begin tracking the project using Git, we can add it to GitHub Desktop using <code>File / Add local repository</code> and then selecting the <code>example_project</code> folder on our harddrive.</p>
+<p>Currently, nothing we are doing is under version control. No changes are being tracked. If we delete some R code, it’s probably gone forever, and we cannot easily compare or restore to a previous version. To begin tracking the project using Git, we can add it to GitHub Desktop using <code>File / New repository</code>. A repository is the term for the digital storage space on GitHub that includes your code, data, and documentation. So, typically the repository consists of the folder on your computer containing all your research materials. It’s the folder than we want to put under version control.</p>
 <center>
-<p><img src="img/add_repo1.png" class="img-fluid" width="300"></p>
-<p><img src="img/add_repo2.png" class="img-fluid" width="300"></p>
+<p><img src="img/new_repo1.png" class="img-fluid" width="300"></p>
+</center>
+<p>You will then be prompted to complete some information about the repository. Because we already have a pre-existing folder, the name of the repository is the name of the folder i.e., <code>example_project</code>. You can add a short description if you’d like. The <code>Local path</code> points GitHub Desktop towards the location of <code>example_project</code> (in our case, within the <code>training</code> folder). We tick the box for a README, which is where we write the documentation for the project, and then select <code>R</code> for the Git ignore. We will cover these two things later! In the example below, we do not select a licence, but by all means select one if you’d like.</p>
+<center>
+<p><img src="img/new_repo2.png" class="img-fluid" width="300"></p>
+</center>
+<p>Then click <code>Create repository</code>. You will then get something like the screenshot below. Your project is now under version control and has been added to GitHub Desktop!</p>
+<center>
+<p><img src="img/new_repo3.png" class="img-fluid" width="800"></p>
 </center>
 </section>
+<section id="editing-a-script" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="editing-a-script"><span class="header-section-number">4.3</span> Editing a script</h3>
+<p>How can we tell that we are now using Git for version control? One easy way to check is just to make an edit to your R script. Open up the R project and the <code>my_analysis.R</code> script in RStudio. If needed, install the packages required to run the script. You don’t actually have to understand or even run the script to follow the exercise, but it will allow you to test things out more if you can get it running.</p>
+<p>Now, make an edit to the R script. This could be a meaningful edit to the code or something trivial like a comment saying “Hello”. In my example, I just add some code to change the colour scheme used in the ggplot. What happens in GitHub Desktop? You will see some colourful annotation of your change on the right, and a summary of the files changed (in this case, just <code>my_analysis.R</code>) on the left.</p>
+<center>
+<p><img src="img/first_edit.png" class="img-fluid" width="800"></p>
+</center>
+</section>
+<section id="making-a-commit" class="level3" data-number="4.4">
+<h3 data-number="4.4" class="anchored" data-anchor-id="making-a-commit"><span class="header-section-number">4.4</span> Making a commit</h3>
+<p>While we can see that Git is tracking these changes, we have not yet taken a ‘snapshot’ of what we’ve done. To do that, we need to make a <strong>commit</strong>. You will notice that once a change is made, the option for making a commit appears in the bottom left, including a pre-filled description of our change (“Update my_analysis.R”). You can write your own description. And the click <code>commit to main</code>.</p>
+<center>
+<p><img src="img/first_commit.png" class="img-fluid" width="800"></p>
+</center>
+<p>Once you’ve done that, it’s a bit of a let down. Nothing really appears to happen. But, when you click on <code>History</code> in the top left, you can see your commit history. You will notice that by default, we made an <code>Initial commit</code> when creating the repository. So you should now have two. Try making some changes, making a commit after each one, and then looking at the <code>History</code> tab. You can edit the code, save a new plot and/or save new data. An example of my commit history is below.</p>
+<center>
+<p><img src="img/commit_history.png" class="img-fluid" width="800"></p>
+</center>
+<p>You can go away and use GitHub Desktop on your own just like this. After each major change to your script, you can make a commit and keep working in the same script safe in the knowledge that you can go back and retrieve old code whenever you want. You do not even need access to the internet to do this. But, one major advantage of GitHub Desktop comes from <strong>pushing</strong> stuff to GitHub.</p>
+</section>
+<section id="pushing-your-changes" class="level3" data-number="4.5">
+<h3 data-number="4.5" class="anchored" data-anchor-id="pushing-your-changes"><span class="header-section-number">4.5</span> Pushing your changes</h3>
+<p>Back on the <code>Changes</code> tab, you will notice a prompt about publishing your repository. As the message says, your repository and all its commits only exist on your local machine. To make it available on <a href="https://github.com/">github.com</a> we need to publish it. Click on <code>Publish repository</code>. You will notice that now we have the option to make the code private. Untick this box (so it’s public) and then click <code>Publish repository</code> again.</p>
+<center>
+<p><img src="img/publish.png" class="img-fluid" width="800"></p>
+</center>
+<p>In Git terminology, you are now <strong>pushing</strong> your (local) commits to the <strong>remote</strong> repository (i.e, the repository on <a href="https://github.com/">github.com</a>). This push is unique because it’s our first one, so the push is combined with publishing the repository online (it did not exist online before). If you click <code>View on GitHub</code> (in the right panel) you will taken to this remote repository. It now exists online!</p>
+<p>You will notice that the remote repository contains everything you’ve done, including the commit history. All your previous snapshots have been stored, backed-up online, and are now available to others.</p>
+<center>
+<p><img src="img/remote.png" class="img-fluid" width="800"></p>
+</center>
+<p>Note that now, your remote repository (i.e., the one on github.com) mimics our local repository (i.e., the one on your laptop). That’s because we commit + pushed all our changes to the remote. But what happens if we or someone else changes something on the remote repository? How can we update our local repository with those changes? We will practice playing with that now by using the README file.</p>
+</section>
+<section id="pulling-changes-to-the-readme" class="level3" data-number="4.6">
+<h3 data-number="4.6" class="anchored" data-anchor-id="pulling-changes-to-the-readme"><span class="header-section-number">4.6</span> Pulling changes to the README</h3>
+<p>You might remember that when we created the repository, we created a README file. This is a very important file: it can be used to document your repository, both for your (future) self and for others that might want to use your code. The file is called <code>README.md</code> in your repository. The contents of that file is rendered and displayed on the main landing page of your repository. If you want, you can edit this file within something like notepad, commit the change, and push your changes to the remote repository, and in doing so the description on the public repository online will change.</p>
+<p>Here, we want to practice a <strong>pull</strong>. This is the opposite of a <strong>push</strong>. Instead of <strong>pushing</strong> changes from our local machine to the remote repository on <a href="https://github.com/">github.com</a>) we can <strong>pull</strong> changes that exist on the remote but not on our local machine. To practice this, we are going to edit our README on the remote repository, and then <strong>pull</strong> those changes so that we have them no our local machine. Click on the edit button of the README.</p>
+<center>
+<p><img src="img/readme.png" class="img-fluid" width="800"></p>
+</center>
+<p>Make some changes to the file. Note that it uses <a href="https://www.markdownguide.org/basic-syntax/">markdown</a> syntax, although you don’t need to know markdown to make an edit. Add some details to your README and then click <code>Commit changes</code> (in green). When you make changes directly to the remote, you don’t need to <strong>push</strong> anything. The commit on its own is enough to change the contents of the remote repository.</p>
+<center>
+<p><img src="img/remote_commit.png" class="img-fluid" width="400"></p>
+</center>
+<p>Now, how can we update our local repository with these changes? We can check for changes on the remote by clicking <code>Fetch origin</code> within GitHub Desktop.</p>
+<center>
+<p><img src="img/fetch.png" class="img-fluid" width="700"></p>
+</center>
+<p>We will then be notified that there’s been a change on the remote (i.e., our edit to the README). We will then be prompted to <strong>pull</strong> from the remote. Click this now!</p>
+<center>
+<p><img src="img/pull_remote.png" class="img-fluid" width="700"></p>
+</center>
+<p>If you now check your <code>README.md</code> on your local repository, you should now see any changes that were made on the remote repository. You will also notice that your <code>History</code> tab has been updated with the commit we made directly to the remote.</p>
+<p>In practice, most things that we <strong>pull</strong> from the remote repository are changes that someone else has made to the remote, such as adding some new code to our script. If Person A pushes some new code to the remote repository, then Person B can then pull their changes to their local machine, for further edits or testing. We cover this during an exercise later.</p>
+<p><strong>Self-study</strong></p>
+<p>Now you’ve successfully pulled changes to the README from the remote, have a go at doing it the other way around. Open up <code>README.md</code> in a text editor (e.g., notepad), make some changes, and then <strong>commit</strong> and <strong>push</strong> those changes to the remote.</p>
+</section>
+</section>
+<section id="collaboration-exercise" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="collaboration-exercise"><span class="header-section-number">5</span> Collaboration exercise</h2>
+<p>Now you’ve practiced some stuff on your own, we can extend the exercise to simulate a collaboration with a research colleague. To do this, you will need a colleague! If you can’t find a friendly colleague to practice this exercise with, you can submit a ticket via ServiceNow for Research Software Management help, and we will schedule an appointment to help you.</p>
+<p>Let’s say you have a colleague that’s really good at making fancy looking ggplots. You want them to contribute to the script on your repository. A straightforward way of doing this is to add them as a collaborator. On the repository webpage, click on <code>Settings</code> and then <code>Collaborators</code>. After going through the two-factor check, click <code>Add people</code> and then search for your colleague’s username. Here, I choose my esteemed colleague <a href="https://github.com/tpronk">Thomas Pronk</a> and click <code>Add tpronk to this repository</code>. Obviously, please choose your colleague’s username!</p>
+<center>
+<p><img src="img/collab.png" class="img-fluid" width="700"></p>
+</center>
+<p>Your colleague will now get an invite to be a collaborator, which we hope they will enthusiastically accept. Once they do, your colleague will need to <strong>clone</strong> your remote repository onto their local machine. You can do this by clicking <code>File / Clone repository</code>.</p>
+<center>
+<p><img src="img/clone1.png" class="img-fluid" width="500"></p>
+</center>
+<p>Then copy the URL of the remote repository into the box, as shown below. Remember that this is my URL – use your own! Your colleague can then choose where they want the repository to live on their machine, and then click <code>Clone</code>.</p>
+<center>
+<p><img src="img/clone2.png" class="img-fluid" width="500"></p>
+</center>
+<p>To be continued…</p>
+</section>
+<section id="git-ignore" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="git-ignore"><span class="header-section-number">6</span> Git ignore</h2>
+<p>A brief explanation of the git ignore file here.</p>
 </section>
 
 </main>
