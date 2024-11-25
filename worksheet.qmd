@@ -6,9 +6,12 @@ date: "2 December, 2024"
 format:
   html:
     toc: true
-    toc-depth: 2
+    toc-depth: 3
     theme: united
     toc_float: true
+    toc-title: Contents
+    toc-location: left
+    number-sections: true
 editor_options: 
   chunk_output_type: console
 ---
@@ -31,7 +34,7 @@ In this workshop you will be learning how to use **GitHub Desktop**. This is a p
 
 <br>
 
-Rather than getting lost in a sea of nearly-identical files with different names, we can use version control. Version control tools start with a base version of a file -- in this case, an R script -- and then record any changes you make to the script as you go along. This could be deleting old code, editing existing code, or writing new code. At any point, you can revert to an old version or compare two different versions to assess what the differences are between these 'snapshots' of the same R script.
+Rather than getting lost in a sea of nearly-identical files with different names (or even worse, only retaining the latest version) we can use version control. Version control tools start with a base version of a file -- in this case, an R script -- and then record any changes you make to the script as you go along. This could be deleting old code, editing existing code, or writing new code. At any point, you can revert to an old version or compare two different versions to assess what the differences are between these 'snapshots' of the same R script.
 
 <center>
 
@@ -59,7 +62,7 @@ Used properly, it is impossible to permanently lose work with version control. Y
 
 **Self-questions**
 
-- Imagine you have 5 co-authors. How would you manage the changes and comments they make to your paper? If you use Microsoft Word, what happens if you accept changes made using the Track Changes option? Do you have a history of those changes?
+- Imagine you have 5 co-authors on a paper. How would you manage the changes and comments they make to your paper? If you use Microsoft Word, what happens if you accept changes made using the Track Changes option? Do you have a history of those changes?
 
 - Imagine you want to collaborate on an R script with a colleague. How would you go about this? Email the script back and forth with your changes? Share the script on a Cloud platform (e.g., One Drive, Google Drive)? If one of you made a mistake, deleting some important code, could you easily identify the change and remedy it?
 
@@ -71,15 +74,35 @@ Here, we recommend using Git via GitHub Desktop. There are two main reasons to t
 
 There are [alternatives](https://www.wearedevelopers.com/magazine/top-github-alternatives) available, many of which also use Git under the hood, but GitHub has some advantages that means it will likely soon become the standard version control tool at Amsterdam UMC ([Pronk & Geertsma, 2024](https://zenodo.org/records/11065899)).
 
-## Setup
+## Exercise
+
+### Setup
 
 If you haven't already:
 
 1. [Sign-up](https://github.com/) to GitHub.
 2. [Download](https://github.com/apps/desktop) GitHub Desktop.
 3. Sign-in to your GitHub account within GitHub Desktop.
-4. Download the example R project that we will work with. Unzip it and place the folder somewhere on your local machine. 
+4. [Download the example R project](https://github.com/langtonhugh/github_desktop/raw/refs/heads/main/example_project.zip) that we will work with. Unzip it and place the folder somewhere on your local machine. 
 
-## Adding a project to GitHub Desktop
+### Adding a project to GitHub Desktop
 
+In this exercise we assume that you have a small, pre-existing project for which you want to introduce version control. You can (and should) of course use version control from the very beginning of each project. For now, we use the example project above. Once saved and unzipped, it should look something like the screenshot below.
 
+<center>
+
+![](img/project_folder.png){width="600"}
+
+</center>
+
+Open up the R project and the `my_analysis.R` script in RStudio. If needed, install the packages required to run the script. You don't actually have to understand or even run the script to follow the exercise, but it will allow you to test things out more if you can get it running.
+
+Currently, nothing we are doing is under version control. No changes are being tracked. If we delete some R code, it's probably gone forever, and we cannot easily compare or restore to a previous version. To begin tracking the project using Git, we can add it to GitHub Desktop using `File / Add local repository` and then selecting the `example_project` folder on our harddrive.
+
+<center>
+
+![](img/add_repo1.png){width="300"}
+
+![](img/add_repo2.png){width="300"}
+
+</center>

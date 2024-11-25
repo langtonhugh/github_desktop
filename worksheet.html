@@ -41,19 +41,24 @@ ul.task-list li input[type="checkbox"] {
 
 <body>
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
   <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">Contents</h2>
    
+  <ul>
+  <li><a href="#preamble" id="toc-preamble" class="nav-link active" data-scroll-target="#preamble"><span class="header-section-number">1</span> Preamble</a></li>
+  <li><a href="#version-control" id="toc-version-control" class="nav-link" data-scroll-target="#version-control"><span class="header-section-number">2</span> Version control</a></li>
+  <li><a href="#why-github-desktop" id="toc-why-github-desktop" class="nav-link" data-scroll-target="#why-github-desktop"><span class="header-section-number">3</span> Why GitHub Desktop?</a></li>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise"><span class="header-section-number">4</span> Exercise</a>
   <ul class="collapse">
-  <li><a href="#preamble" id="toc-preamble" class="nav-link active" data-scroll-target="#preamble">Preamble</a></li>
-  <li><a href="#version-control" id="toc-version-control" class="nav-link" data-scroll-target="#version-control">Version control</a></li>
-  <li><a href="#why-github-desktop" id="toc-why-github-desktop" class="nav-link" data-scroll-target="#why-github-desktop">Why GitHub Desktop?</a></li>
-  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
-  <li><a href="#adding-a-project-to-github-desktop" id="toc-adding-a-project-to-github-desktop" class="nav-link" data-scroll-target="#adding-a-project-to-github-desktop">Adding a project to GitHub Desktop</a></li>
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup"><span class="header-section-number">4.1</span> Setup</a></li>
+  <li><a href="#adding-a-project-to-github-desktop" id="toc-adding-a-project-to-github-desktop" class="nav-link" data-scroll-target="#adding-a-project-to-github-desktop"><span class="header-section-number">4.2</span> Adding a project to GitHub Desktop</a></li>
+  </ul></li>
   </ul>
 </nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
 </div>
 <main class="content" id="quarto-document-content">
 
@@ -87,19 +92,19 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="preamble" class="level2">
-<h2 class="anchored" data-anchor-id="preamble">Preamble</h2>
+<section id="preamble" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="preamble"><span class="header-section-number">1</span> Preamble</h2>
 <p>This material is a pilot workshop introducing <a href="https://github.com/apps/desktop">GitHub Desktop</a> for researchers at <a href="https://www.amsterdamumc.org/en/research.htm">Amsterdam UMC</a>. It is partly based on material produced by <a href="https://github.com/TIBHannover/git-desktop">TIB Hannover</a>. The workshop is a compact, essentials-only session designed to be completed in one hour by students or researchers with zero familiarity with git/GitHub, but some familiarity with R or other programming languages.</p>
 </section>
-<section id="version-control" class="level2">
-<h2 class="anchored" data-anchor-id="version-control">Version control</h2>
+<section id="version-control" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="version-control"><span class="header-section-number">2</span> Version control</h2>
 <p>In this workshop you will be learning how to use <strong>GitHub Desktop</strong>. This is a point-and-click application that will allow you to use <strong>version control</strong>. Version control is a way of managing changes to code, in our case, R code. Once you’ve mastered the basics of version control using GitHub Desktop, you will be better able to track changes to your own code, revert to old versions of your scripts, collaborate with others, and avoid the worry of losing your work. At the very least, by the end of this session, you will never again have to use the classic (but deeply shameful) academic file naming system for your R scripts.</p>
 <p><br></p>
 <center>
 <p><img src="img/versioncontrol.png" class="img-fluid" width="500"></p>
 </center>
 <p><br></p>
-<p>Rather than getting lost in a sea of nearly-identical files with different names, we can use version control. Version control tools start with a base version of a file – in this case, an R script – and then record any changes you make to the script as you go along. This could be deleting old code, editing existing code, or writing new code. At any point, you can revert to an old version or compare two different versions to assess what the differences are between these ‘snapshots’ of the same R script.</p>
+<p>Rather than getting lost in a sea of nearly-identical files with different names (or even worse, only retaining the latest version) we can use version control. Version control tools start with a base version of a file – in this case, an R script – and then record any changes you make to the script as you go along. This could be deleting old code, editing existing code, or writing new code. At any point, you can revert to an old version or compare two different versions to assess what the differences are between these ‘snapshots’ of the same R script.</p>
 <center>
 <p><img src="img/play-changes.svg" class="img-fluid" width="500"></p>
 </center>
@@ -114,28 +119,41 @@ ul.task-list li input[type="checkbox"] {
 <p>Used properly, it is impossible to permanently lose work with version control. You will never have to frantically search through Outlook for an R script that you emailed to yourself, or frantically try and ‘restore previous version’ within Windows. Version control takes care of this for you!</p>
 <p><strong>Self-questions</strong></p>
 <ul>
-<li><p>Imagine you have 5 co-authors. How would you manage the changes and comments they make to your paper? If you use Microsoft Word, what happens if you accept changes made using the Track Changes option? Do you have a history of those changes?</p></li>
+<li><p>Imagine you have 5 co-authors on a paper. How would you manage the changes and comments they make to your paper? If you use Microsoft Word, what happens if you accept changes made using the Track Changes option? Do you have a history of those changes?</p></li>
 <li><p>Imagine you want to collaborate on an R script with a colleague. How would you go about this? Email the script back and forth with your changes? Share the script on a Cloud platform (e.g., One Drive, Google Drive)? If one of you made a mistake, deleting some important code, could you easily identify the change and remedy it?</p></li>
 </ul>
 </section>
-<section id="why-github-desktop" class="level2">
-<h2 class="anchored" data-anchor-id="why-github-desktop">Why GitHub Desktop?</h2>
+<section id="why-github-desktop" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="why-github-desktop"><span class="header-section-number">3</span> Why GitHub Desktop?</h2>
 <p>So, we will be learning GitHub Desktop for version control. You might have heard various terms being thrown around with respect to version control, almost all of which will include the word ‘git’. Let’s clarify this. <strong>Git</strong> is the software doing the hard work: this is the thing that’s tracking changes to your R code. If you really want to, you can download <a href="https://git-scm.com/downloads">Git</a>, go away and use version control without any further tools.</p>
 <p>Here, we recommend using Git via GitHub Desktop. There are two main reasons to this. First, using GitHub Desktop is one of the easiest and most accessible ways to use Git for version control. It does not require any usage of the command line and it has a pretty good point-and-click user interface. Second, GitHub Desktop – as the name implies – works seamlessly with <a href="https://github.com/">github.com</a>, the largest online platform in the world for sharing and storing code. By using GitHub Desktop, you can not only put your code under version control with minimal effort, but you can also easily share your code with the world and remotely collaborate with your colleagues. Even if you work alone, and you do not want to share your code with anyone, <a href="https://github.com/">github.com</a> can still be used to store your code privately, ensuring that all your versions are backed-up.</p>
 <p>There are <a href="https://www.wearedevelopers.com/magazine/top-github-alternatives">alternatives</a> available, many of which also use Git under the hood, but GitHub has some advantages that means it will likely soon become the standard version control tool at Amsterdam UMC (<a href="https://zenodo.org/records/11065899">Pronk &amp; Geertsma, 2024</a>).</p>
 </section>
-<section id="setup" class="level2">
-<h2 class="anchored" data-anchor-id="setup">Setup</h2>
+<section id="exercise" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="exercise"><span class="header-section-number">4</span> Exercise</h2>
+<section id="setup" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="setup"><span class="header-section-number">4.1</span> Setup</h3>
 <p>If you haven’t already:</p>
 <ol type="1">
 <li><a href="https://github.com/">Sign-up</a> to GitHub.</li>
 <li><a href="https://github.com/apps/desktop">Download</a> GitHub Desktop.</li>
 <li>Sign-in to your GitHub account within GitHub Desktop.</li>
-<li>Download the example R project that we will work with. Unzip it and place the folder somewhere on your local machine.</li>
+<li><a href="https://github.com/langtonhugh/github_desktop/raw/refs/heads/main/example_project.zip">Download the example R project</a> that we will work with. Unzip it and place the folder somewhere on your local machine.</li>
 </ol>
 </section>
-<section id="adding-a-project-to-github-desktop" class="level2">
-<h2 class="anchored" data-anchor-id="adding-a-project-to-github-desktop">Adding a project to GitHub Desktop</h2>
+<section id="adding-a-project-to-github-desktop" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="adding-a-project-to-github-desktop"><span class="header-section-number">4.2</span> Adding a project to GitHub Desktop</h3>
+<p>In this exercise we assume that you have a small, pre-existing project for which you want to introduce version control. You can (and should) of course use version control from the very beginning of each project. For now, we use the example project above. Once saved and unzipped, it should look something like the screenshot below.</p>
+<center>
+<p><img src="img/project_folder.png" class="img-fluid" width="600"></p>
+</center>
+<p>Open up the R project and the <code>my_analysis.R</code> script in RStudio. If needed, install the packages required to run the script. You don’t actually have to understand or even run the script to follow the exercise, but it will allow you to test things out more if you can get it running.</p>
+<p>Currently, nothing we are doing is under version control. No changes are being tracked. If we delete some R code, it’s probably gone forever, and we cannot easily compare or restore to a previous version. To begin tracking the project using Git, we can add it to GitHub Desktop using <code>File / Add local repository</code> and then selecting the <code>example_project</code> folder on our harddrive.</p>
+<center>
+<p><img src="img/add_repo1.png" class="img-fluid" width="300"></p>
+<p><img src="img/add_repo2.png" class="img-fluid" width="300"></p>
+</center>
+</section>
 </section>
 
 </main>
