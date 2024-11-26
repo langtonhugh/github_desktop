@@ -230,7 +230,10 @@ Let's say you have a colleague that's really good at making fancy looking ggplot
 
 </center>
 
-Your colleague will now get an invite to be a collaborator, which we hope they will enthusiastically accept. But even then, they do not have any of your data and code. No, don't email it to them... Instead, your colleague can **clone** your remote repository onto their local machine. You can do this by clicking `File / Clone repository` within GitHub Desktop. Before doing this, make sure you've pushed all your local changes to the remote, so that your colleague is getting the latest version of your project.
+Your colleague will now get an invite to be a collaborator, which we hope they will enthusiastically accept. But even then, they do not have any of your data and code. No, don't email it to them... Instead, your colleague can **clone** your remote repository onto their local machine. They can do this by navigating to your remote repository
+
+
+You can do this by clicking `File / Clone repository` within GitHub Desktop. Before doing this, make sure you've pushed all your local changes to the remote, so that your colleague is getting the latest version of your project.
 
 <center>
 
