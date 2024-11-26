@@ -61,6 +61,7 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#collaboration-exercise" id="toc-collaboration-exercise" class="nav-link" data-scroll-target="#collaboration-exercise"><span class="header-section-number">5</span> Collaboration exercise</a></li>
   <li><a href="#git-ignore" id="toc-git-ignore" class="nav-link" data-scroll-target="#git-ignore"><span class="header-section-number">6</span> Git ignore</a></li>
+  <li><a href="#git-within-rstudio" id="toc-git-within-rstudio" class="nav-link" data-scroll-target="#git-within-rstudio"><span class="header-section-number">7</span> Git within RStudio</a></li>
   </ul>
 </nav>
 </div>
@@ -132,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="why-github-desktop" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="why-github-desktop"><span class="header-section-number">3</span> Why GitHub Desktop?</h2>
 <p>So, we will be learning GitHub Desktop for version control. You might have heard various terms being thrown around with respect to version control, almost all of which will include the word ‘git’. Let’s clarify this. <strong>Git</strong> is the software doing the hard work: this is the thing that’s tracking changes to your R code. If you really want to, you can download <a href="https://git-scm.com/downloads">Git</a>, go away and use version control without any further tools.</p>
-<p>Here, we recommend using Git via GitHub Desktop. There are two main reasons to this. First, using GitHub Desktop is one of the easiest and most accessible ways to use Git for version control. It does not require any usage of the command line and it has a pretty good point-and-click user interface. Second, GitHub Desktop – as the name implies – works seamlessly with <a href="https://github.com/">github.com</a>, the largest online platform in the world for sharing and storing code. By using GitHub Desktop, you can not only put your code under version control with minimal effort, but you can also easily share your code with the world and remotely collaborate with your colleagues. Even if you work alone, and you do not want to share your code with anyone, <a href="https://github.com/">github.com</a> can still be used to store your code privately, ensuring that all your versions are backed-up.</p>
+<p>Here, we recommend using Git via GitHub Desktop. There are two main reasons to this. First, using GitHub Desktop is one of the easiest and most lightweight ways to use Git for version control. It does not require any usage of the command line and it has a pretty good point-and-click user interface. Second, GitHub Desktop – as the name implies – works seamlessly with <a href="https://github.com/">github.com</a>, the largest online platform in the world for sharing and storing code. By using GitHub Desktop, you can not only put your code under version control with minimal effort, but you can also easily share your code with the world and remotely collaborate with your colleagues. Even if you work alone, and you do not want to share your code with anyone, <a href="https://github.com/">github.com</a> can still be used to store your code privately, ensuring that all your versions are backed-up.</p>
 <p>There are <a href="https://www.wearedevelopers.com/magazine/top-github-alternatives">alternatives</a> available, many of which also use Git under the hood, but GitHub has some advantages that means it will likely soon become the standard version control tool at Amsterdam UMC (<a href="https://zenodo.org/records/11065899">Pronk &amp; Geertsma, 2024</a>).</p>
 </section>
 <section id="solo-exercise" class="level2" data-number="4">
@@ -239,11 +240,28 @@ ul.task-list li input[type="checkbox"] {
 <center>
 <p><img src="img/clone2.png" class="img-fluid" width="500"></p>
 </center>
-<p>To be continued…</p>
+<p>If all has gone to plan, each of you should now have a version of the research materials (i.e., the <code>example_project</code> folder) on your machines. To practice a collaboration, have one of you make some changes to the R script – edit something, add something or delete something. <strong>Commit</strong> and <strong>push</strong> those changes to the remote. The other person can should <strong>pull</strong> those changes from the remote. Continue doing this for a couple of iterations in order to practice the process.</p>
+<p>So far, you have been taking turns editing the same code chunk. In reality, you might not know when your colleague is working on the R script. What happens if you edit the same chunk of code and attempt to push those changes to the remote repository? You might get a warning message about a <strong>conflict</strong>. These conflicts need to be resolved before pushing. We don’t cover conflicts in detail during this workshop but I would recommend <a href="https://www.youtube.com/watch?v=MIVW0sijSjY">this video</a> for a concise summary. Note that the example does not use R, but the principle is the same! In practice, there are a couple of ways you can avoid conflicts:</p>
+<ul>
+<li>Commit and push your changes frequently. Do <strong>not</strong> make a big changes, sit on them for weeks, and then decide to push.</li>
+<li>Fetch and pull frequently. This ensures that you will always have the most recent changes to the remote on your local machine.</li>
+<li>Communicate with your colleague(s). The chances are that it’s not that productive for multiple people to be working on the same lines of code at the same time. You probably wouldn’t edit the same paragraph in a paper collectively either!</li>
+</ul>
 </section>
 <section id="git-ignore" class="level2" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="git-ignore"><span class="header-section-number">6</span> Git ignore</h2>
-<p>A brief explanation of the git ignore file here.</p>
+<p>When we created our repository, we selected a Git ignore option for <code>R</code>. You might have noticed that this created a file in your repository called <code>.gitignore</code>. You can open this file up in a text editor like notepad. The git ignore file states everything that you do <strong>not</strong> want to track with version control. Typically, the git ignore will list things that you do not want pushed to a public repository on <a href="https://github.com/">github.com</a>, such as data files or personal notes. When we created our repository with GitHub Desktop, we chose a pre-completed git ignore file specifically designed for the R programming language. You do not have to do this, but it does contain some sensible decisions, such as ignoring session data files (<code>.RData</code>). For your own projects, you can create your own or edit the template file for R.</p>
+<p>To test things out, create a text file within your <code>scripts</code> folder. You should see this appear on GitHub Desktop as a change. Now add this text file to your git ignore, and save it. Note that you will have to specify that it lives within the <code>scripts</code> folder (i.e., <code>scripts/my_text_file.txt</code>). What happens? It should disappear from your changes in GitHub Desktop. Git is no longer tracking it!</p>
+<p>Now, what happens if you add a previously-pushed file, like your <code>my_analysis.R</code> script, to the git ignore? Or even the <code>diamonds_data.csv</code> file? If you then make a commit and push your changes to the remote, does anything change on the remote repository?</p>
+<p>Version control is almost always a blessing, but it can also be a curse. If you push something to your remote repository, and then subsequently decide that you want Git to ignore that file, the file will still be retrievable in the commit history! So, think carefully about what <strong>do</strong> and <strong>do not</strong> want to be tracked and available on your public repository. If you’re not sure about this, please get in contact with the Research Data Management team, and we can schedule a consultation appointment.</p>
+</section>
+<section id="git-within-rstudio" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="git-within-rstudio"><span class="header-section-number">7</span> Git within RStudio</h2>
+<p>We’ve focused on GitHub Desktop, which means you will be able to use version control with any programming language in exactly the same way as we’ve covered here. If you are likely to stick with R, you can make use of the built-in Git functionality of RStudio. Assuming you are on a reasonably recent version of RStudio, you will notice this tab in the top right.</p>
+<center>
+<p><img src="img/rgit.png" class="img-fluid" width="500"></p>
+</center>
+<p>Many of these options will be familiar to you (e.g., <strong>commit</strong>, <strong>pull</strong>, <strong>push</strong>). The principles of Git are exactly the same as we covered within GitHub Desktop, but this tab means you don’t have to leave RStudio to use version control.</p>
 </section>
 
 </main>
