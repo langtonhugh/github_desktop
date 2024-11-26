@@ -134,7 +134,7 @@ Now, make an edit to the R script. This could be a meaningful edit to the code o
 
 ### Making a commit
 
-While we can see that Git is tracking these changes, we have not yet taken a 'snapshot' of what we've done. To do that, we need to make a **commit**. You will notice that once a change is made, the option for making a commit appears in the bottom left, including a pre-filled description of our change ("Update my_analysis.R"). You can write your own description. And the click `commit to main`.
+While we can see that Git is tracking these changes, we have not yet taken a 'snapshot' of what we've done. To do that, we need to make a **commit**. You will notice that once a change is made, the option for making a commit appears in the bottom left, including a pre-filled description of our change ("Update my_analysis.R"). You can write your own description. Next, click `commit to main`.
 
 <center>
 
@@ -162,7 +162,7 @@ Back on the `Changes` tab, you will notice a prompt about publishing your reposi
 
 </center>
 
-In Git terminology, you are now **pushing** your (local) commits to the **remote** repository (i.e, the repository on [github.com](https://github.com/)). This push is unique because it's our first one, so the push is combined with publishing the repository online (it did not exist online before). If you click `View on GitHub` (in the right panel) you will taken to this remote repository. It now exists online! 
+In Git terminology, you are now **pushing** your (local) commits to the **remote** repository (i.e, the repository on [github.com](https://github.com/)). This push is unique because it's our first one, so the push is combined with publishing the repository online (it did not exist online before). If you click `View on GitHub` (in the right panel) you will be taken to this remote repository. It now exists online! 
 
 You will notice that the remote repository contains everything you've done, including the commit history. All your previous snapshots have been stored, backed-up online, and are now available to others.
 
@@ -176,7 +176,7 @@ Note that now, your remote repository (i.e., the one on github.com) mimics our l
 
 ### Pulling changes to the README
 
-You might remember that when we created the repository, we created a README file. This is a very important file: it can be used to document your repository, both for your (future) self and for others that might want to use your code. The file is called `README.md` in your repository. The contents of that file is rendered and displayed on the main landing page of your remote repository [github.com](https://github.com/). If you want, you can edit this file within something like notepad, commit the change, and push your changes to the remote repository, and in doing so the description on the public repository online will change.
+You might remember that when we created the repository, we created a README file. This is a very important file: it can be used to document your repository, both for your (future) self and for others that might want to use your code. The file is called `README.md` in your repository. The contents of that file is rendered and displayed on the main landing page of your remote repository on [github.com](https://github.com/). If you want, you can edit this file within something like notepad, commit the change, and push your changes to the remote repository, and in doing so the description on the public repository online will change.
 
 Here, we want to practice a **pull**. This is the opposite of a **push**. Instead of **pushing** changes from our local machine to the remote repository on [github.com](https://github.com/) we can **pull** changes that exist on the remote but not on our local machine. To practice this, we are going to edit our README on the remote repository, and then **pull** those changes so that we have them on our local machine. Click the edit button of the README on the remote repository web page.
 
@@ -186,7 +186,7 @@ Here, we want to practice a **pull**. This is the opposite of a **push**. Instea
 
 </center>
 
-Make some changes to the file. Note that it uses [markdown](https://www.markdownguide.org/basic-syntax/) syntax, although you don't need to know markdown to make an edit. Add some details to your README and then click `Commit changes` (in green). When you make changes directly to the remote repository on [github.com](https://github.com/), you don't need to **push** anything. The commit on its own is enough to change the contents of the remote repository.
+Make some changes to the file. Note that it uses [markdown](https://www.markdownguide.org/basic-syntax/) syntax (with some special [GitHub flavoring](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github)), although you don't need to know markdown to make an edit. Add some details to your README and then click `Commit changes` (in green). When you make changes directly to the remote repository on [github.com](https://github.com/), you don't need to **push** anything. The commit on its own is enough to change the contents of the remote repository.
 
 <center>
 
@@ -202,7 +202,7 @@ Now, how can we update our local repository with these changes? We can check for
 
 </center>
 
-We will then be notified that there's been a change on the remote (i.e., our edit to the README). We will then be prompted to **pull** from the remote. Click this now!
+We will then be notified that there's been a change on the remote (i.e., our edit to the README) and receive a prompt to **pull** from the remote. Click this now!
 
 <center>
 
@@ -220,9 +220,9 @@ Now you've successfully pulled changes to the README from the remote, have a go 
 
 ## Collaboration exercise
 
-Now you've practiced some stuff on your own, we can extend the exercise to simulate a collaboration with a research colleague. To do this, you will need a colleague! If you can't find a friendly colleague to practice this exercise with, you can submit a ticket via ServiceNow for Research Software Management help, and we will schedule an appointment to help you.
+Now you've practiced some stuff on your own, we can extend the exercise to simulate a collaboration with a research colleague. To do this, you will need a colleague! If you can't find a friendly colleague to practice this exercise with, and you're a member of Amsterdam UMC, then we could help you out. Make a request to [RDM Research Software Management via ServiceNow](https://amsterdamumc.service-now.com/esc?id=sc_cat_item&sys_id=6edc44311bea4110f2ae6313604bcbc4), and we will schedule an appointment to help you.
 
-Let's say you have a colleague that's really good at making fancy looking ggplots. You want them to contribute to the script on your repository. A straightforward way of doing this is to add them as a collaborator. On the repository webpage, click on `Settings` and then `Collaborators`. After going through the two-factor check, click `Add people` and then search for your colleague's username. Here, I choose my esteemed colleague [Thomas Pronk](https://github.com/tpronk) and click `Add tpronk to this repository`. Obviously, please choose your colleague's username!
+Let's say you have a colleague that's really good at making fancy looking ggplots. You want them to contribute to the script in your repository. A straightforward way of doing this is to add them as a collaborator. On the repository webpage at [github.com](https://github.com/), click on `Settings` and then `Collaborators`. After going through the two-factor check, click `Add people` and then search for your colleague's GitHub username. Here, I choose my esteemed colleague [Thomas Pronk](https://github.com/tpronk) and click `Add tpronk to this repository`. Obviously, please choose your colleague's username!
 
 <center>
 
