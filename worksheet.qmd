@@ -230,18 +230,17 @@ Let's say you have a colleague that's really good at making fancy looking ggplot
 
 </center>
 
-Your colleague will now get an invite to be a collaborator, which we hope they will enthusiastically accept. But even then, they do not have any of your data and code. No, don't email it to them... Instead, your colleague can **clone** your remote repository onto their local machine. They can do this by navigating to your remote repository
+Your colleague will now get an invite to be a collaborator, which we hope they will enthusiastically accept. But even then, they do not have any of your data and code. No, don't email it to them... Instead, your colleague can **clone** your remote repository onto their local machine. Before proceeding, make sure you've pushed all your local changes to the remote, so that your colleague is getting the latest version of your project.
 
-
-You can do this by clicking `File / Clone repository` within GitHub Desktop. Before doing this, make sure you've pushed all your local changes to the remote, so that your colleague is getting the latest version of your project.
+Your colleague can make a clone by navigating to your remote repository on [github.com](https://github.com/), clicking on the green `Code` button, and then clicking `Open with GitHub Desktop`. 
 
 <center>
 
-![](img/clone1.png){width="500"}
+![](img/clone1.png){width="300"}
 
 </center>
 
-Then copy the URL of the remote repository into the box, as shown below. Remember that this is my URL -- use your own! Your colleague can then choose where they want the repository to live on their machine, and then click `Clone`.
+Within GitHub Desktop, your colleague will now have a pre-filled window with the URL of the remote repository, and the location where the repository will be cloned to. Remember that in the screenshot below the URL should be **your** repository (i.e., not langtonhugh!). Your colleague can change the location under `Local path` as they'd like and then click `Clone`.
 
 <center>
 
