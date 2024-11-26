@@ -38,7 +38,7 @@ Rather than getting lost in a sea of nearly-identical files with different names
 
 <center>
 
-![](img/play-changes.svg){width="500"}
+![[Image source](https://caltechlibrary.github.io/git-desktop/01-basics/)](img/play-changes.svg){width="500"}
 
 </center>
 
@@ -46,7 +46,7 @@ Two (or more) collaborators can also independently make different changes to the
 
 <center>
 
-![](img/versions.svg){width="500"}
+![[Image source](https://caltechlibrary.github.io/git-desktop/01-basics/)](img/versions.svg){width="500"}
 
 </center>
 
@@ -54,7 +54,7 @@ And then later on, the two different versions can be **merged** into the same ba
 
 <center>
 
-![](img/merge.svg){width="500"}
+![[Image source](https://caltechlibrary.github.io/git-desktop/01-basics/)](img/merge.svg){width="500"}
 
 </center>
 
@@ -246,7 +246,7 @@ Then copy the URL of the remote repository into the box, as shown below. Remembe
 
 </center>
 
-If all has gone to plan, each of you should now have a version of the research materials (i.e., the `example_project` folder) on your machines. To practice a collaboration, have one of you make some changes to the R script -- edit something, add something or delete something. **Commit** and **push** those changes to the remote. The other person can should **pull** those changes from the remote. Continue doing this for a couple of iterations in order to practice the process.
+If all has gone to plan, each of you should now have a version of the research materials (i.e., the `example_project` folder) on your machines. To practice a collaboration, have one of you make some changes to the R script -- edit something, add something or delete something. **Commit** and **push** those changes to the remote. The other person can then **pull** those changes from the remote. Continue doing this for a couple of iterations in order to practice the process.
 
 So far, you have been taking turns editing the same code chunk. In reality, you might not know when your colleague is working on the R script. What happens if you edit the same chunk of code and attempt to push those changes to the remote repository? You might get a warning message about a **conflict**. These conflicts need to be resolved before pushing. We don't cover conflicts in detail during this workshop but I would recommend [this video](https://www.youtube.com/watch?v=MIVW0sijSjY) for a concise summary. Note that the example does not use R, but the principle is the same! In practice, there are a couple of ways you can avoid conflicts:
 
@@ -262,7 +262,7 @@ To test things out, create a text file within your `scripts` folder. You should 
 
 Now, what happens if you add a previously-pushed file, like your `my_analysis.R` script, to the git ignore? Or even the `diamonds_data.csv` file? If you then make a commit and push your changes to the remote, does anything change on the remote repository? 
 
-Version control is almost always a blessing, but it can also be a curse. If you push something to your remote repository, and then subsequently decide that you want Git to ignore that file, the file will still be retrievable in the commit history! So, think carefully about what **do** and **do not** want to be tracked and available on your public repository. If you're not sure about this, please get in contact with the Research Data Management team, and we can schedule a consultation appointment.
+Version control is almost always a blessing, but it can also be a curse. If you push something to your remote repository, and then subsequently decide that you want Git to ignore that file, the file will still be retrievable in the remote commit history! So, think carefully about what **do** and **do not** want to be tracked and available on your public repository. If you're not sure about this, please get in contact with the Research Data Management team, and we can schedule a consultation appointment.
 
 ## Git within RStudio
 
