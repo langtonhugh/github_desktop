@@ -153,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
 <center>
 <p><img src="img/project_folder.png" class="img-fluid" width="600"></p>
 </center>
-<p>Currently, nothing we are doing is under version control. No changes are being tracked. If we delete some R code, it’s probably gone forever, and we cannot easily compare or restore to a previous version. To begin tracking the project using Git, we can add it to GitHub Desktop using <code>File / New repository</code>. A repository is the term for the digital storage space on GitHub that includes your code, data, and documentation. So, typically the repository consists of the folder on your computer containing all your research materials. It’s the folder than we want to put under version control.</p>
+<p>Currently, nothing we are doing is under version control. No changes are being tracked. If we delete some R code, it’s probably gone forever, and we cannot easily compare or restore to a previous version. To begin tracking the project using Git, we can add it to GitHub Desktop using <code>File / New repository</code>. A repository is the term for the digital storage space on GitHub that includes your code, data, and documentation. So, typically the repository consists of the folder on your computer containing all your research materials. It’s the folder that we want to put under version control.</p>
 <center>
 <p><img src="img/new_repo1.png" class="img-fluid" width="300"></p>
 </center>
@@ -180,7 +180,7 @@ ul.task-list li input[type="checkbox"] {
 <center>
 <p><img src="img/first_commit.png" class="img-fluid" width="800"></p>
 </center>
-<p>Once you’ve done that, it’s a bit of a let down. Nothing really appears to happen. But, when you click on <code>History</code> in the top left, you can see your commit history. You will notice that by default, we made an <code>Initial commit</code> when creating the repository. So you should now have two. Try making some changes, making a commit after each one, and then looking at the <code>History</code> tab. You can edit the code, save a new plot and/or save new data. An example of my commit history is below.</p>
+<p>Once you’ve done that, nothing really appears to happen. But, when you click on <code>History</code> in the top left, you can see your commit history. You will notice that by default, we made an <code>Initial commit</code> when creating the repository. Click on it and look at what we added. Then try making some new changes, making a commit after each one, and then look at the <code>History</code> tab. You can edit the code, save a new plot and/or save new data. An example of my commit history is below.</p>
 <center>
 <p><img src="img/commit_history.png" class="img-fluid" width="800"></p>
 </center>
@@ -201,12 +201,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="pulling-changes-to-the-readme" class="level3" data-number="4.6">
 <h3 data-number="4.6" class="anchored" data-anchor-id="pulling-changes-to-the-readme"><span class="header-section-number">4.6</span> Pulling changes to the README</h3>
-<p>You might remember that when we created the repository, we created a README file. This is a very important file: it can be used to document your repository, both for your (future) self and for others that might want to use your code. The file is called <code>README.md</code> in your repository. The contents of that file is rendered and displayed on the main landing page of your repository. If you want, you can edit this file within something like notepad, commit the change, and push your changes to the remote repository, and in doing so the description on the public repository online will change.</p>
-<p>Here, we want to practice a <strong>pull</strong>. This is the opposite of a <strong>push</strong>. Instead of <strong>pushing</strong> changes from our local machine to the remote repository on <a href="https://github.com/">github.com</a>) we can <strong>pull</strong> changes that exist on the remote but not on our local machine. To practice this, we are going to edit our README on the remote repository, and then <strong>pull</strong> those changes so that we have them no our local machine. Click on the edit button of the README.</p>
+<p>You might remember that when we created the repository, we created a README file. This is a very important file: it can be used to document your repository, both for your (future) self and for others that might want to use your code. The file is called <code>README.md</code> in your repository. The contents of that file is rendered and displayed on the main landing page of your remote repository <a href="https://github.com/">github.com</a>. If you want, you can edit this file within something like notepad, commit the change, and push your changes to the remote repository, and in doing so the description on the public repository online will change.</p>
+<p>Here, we want to practice a <strong>pull</strong>. This is the opposite of a <strong>push</strong>. Instead of <strong>pushing</strong> changes from our local machine to the remote repository on <a href="https://github.com/">github.com</a> we can <strong>pull</strong> changes that exist on the remote but not on our local machine. To practice this, we are going to edit our README on the remote repository, and then <strong>pull</strong> those changes so that we have them on our local machine. Click the edit button of the README on the remote repository web page.</p>
 <center>
 <p><img src="img/readme.png" class="img-fluid" width="800"></p>
 </center>
-<p>Make some changes to the file. Note that it uses <a href="https://www.markdownguide.org/basic-syntax/">markdown</a> syntax, although you don’t need to know markdown to make an edit. Add some details to your README and then click <code>Commit changes</code> (in green). When you make changes directly to the remote, you don’t need to <strong>push</strong> anything. The commit on its own is enough to change the contents of the remote repository.</p>
+<p>Make some changes to the file. Note that it uses <a href="https://www.markdownguide.org/basic-syntax/">markdown</a> syntax, although you don’t need to know markdown to make an edit. Add some details to your README and then click <code>Commit changes</code> (in green). When you make changes directly to the remote repository on <a href="https://github.com/">github.com</a>, you don’t need to <strong>push</strong> anything. The commit on its own is enough to change the contents of the remote repository.</p>
 <center>
 <p><img src="img/remote_commit.png" class="img-fluid" width="400"></p>
 </center>
@@ -219,7 +219,7 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="img/pull_remote.png" class="img-fluid" width="700"></p>
 </center>
 <p>If you now check your <code>README.md</code> on your local repository, you should now see any changes that were made on the remote repository. You will also notice that your <code>History</code> tab has been updated with the commit we made directly to the remote.</p>
-<p>In practice, most things that we <strong>pull</strong> from the remote repository are changes that someone else has made to the remote, such as adding some new code to our script. If Person A pushes some new code to the remote repository, then Person B can then pull their changes to their local machine, for further edits or testing. We cover this during an exercise later.</p>
+<p>In practice, most things that we <strong>pull</strong> from the remote repository are changes that someone else has made to the remote via a commit and push on their own machine, such as adding some new code to our script. If Person A pushes some new code to the remote repository, then Person B can then pull their changes to their local machine, for further edits or testing. We cover this during an exercise later.</p>
 <p><strong>Self-study</strong></p>
 <p>Now you’ve successfully pulled changes to the README from the remote, have a go at doing it the other way around. Open up <code>README.md</code> in a text editor (e.g., notepad), make some changes, and then <strong>commit</strong> and <strong>push</strong> those changes to the remote.</p>
 </section>
@@ -231,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
 <center>
 <p><img src="img/collab.png" class="img-fluid" width="700"></p>
 </center>
-<p>Your colleague will now get an invite to be a collaborator, which we hope they will enthusiastically accept. Once they do, your colleague will need to <strong>clone</strong> your remote repository onto their local machine. You can do this by clicking <code>File / Clone repository</code>.</p>
+<p>Your colleague will now get an invite to be a collaborator, which we hope they will enthusiastically accept. But even then, they do not have any of your data and code. No, don’t email it to them… Instead, your colleague can <strong>clone</strong> your remote repository onto their local machine. You can do this by clicking <code>File / Clone repository</code> within GitHub Desktop. Before doing this, make sure you’ve pushed all your local changes to the remote, so that your colleague is getting the latest version of your project.</p>
 <center>
 <p><img src="img/clone1.png" class="img-fluid" width="500"></p>
 </center>

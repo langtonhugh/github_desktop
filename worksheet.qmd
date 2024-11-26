@@ -95,7 +95,7 @@ In this exercise we assume that you have a small, pre-existing project for which
 
 </center>
 
-Currently, nothing we are doing is under version control. No changes are being tracked. If we delete some R code, it's probably gone forever, and we cannot easily compare or restore to a previous version. To begin tracking the project using Git, we can add it to GitHub Desktop using `File / New repository`. A repository is the term for the digital storage space on GitHub that includes your code, data, and documentation. So, typically the repository consists of the folder on your computer containing all your research materials. It's the folder than we want to put under version control.
+Currently, nothing we are doing is under version control. No changes are being tracked. If we delete some R code, it's probably gone forever, and we cannot easily compare or restore to a previous version. To begin tracking the project using Git, we can add it to GitHub Desktop using `File / New repository`. A repository is the term for the digital storage space on GitHub that includes your code, data, and documentation. So, typically the repository consists of the folder on your computer containing all your research materials. It's the folder that we want to put under version control.
 
 <center>
 
@@ -142,7 +142,7 @@ While we can see that Git is tracking these changes, we have not yet taken a 'sn
 
 </center>
 
-Once you've done that, it's a bit of a let down. Nothing really appears to happen. But, when you click on `History` in the top left, you can see your commit history. You will notice that by default, we made an `Initial commit` when creating the repository. So you should now have two. Try making some changes, making a commit after each one, and then looking at the `History` tab. You can edit the code, save a new plot and/or save new data. An example of my commit history is below. 
+Once you've done that, nothing really appears to happen. But, when you click on `History` in the top left, you can see your commit history. You will notice that by default, we made an `Initial commit` when creating the repository. Click on it and look at what we added. Then try making some new changes, making a commit after each one, and then look at the `History` tab. You can edit the code, save a new plot and/or save new data. An example of my commit history is below. 
 
 <center>
 
@@ -176,9 +176,9 @@ Note that now, your remote repository (i.e., the one on github.com) mimics our l
 
 ### Pulling changes to the README
 
-You might remember that when we created the repository, we created a README file. This is a very important file: it can be used to document your repository, both for your (future) self and for others that might want to use your code. The file is called `README.md` in your repository. The contents of that file is rendered and displayed on the main landing page of your repository. If you want, you can edit this file within something like notepad, commit the change, and push your changes to the remote repository, and in doing so the description on the public repository online will change. 
+You might remember that when we created the repository, we created a README file. This is a very important file: it can be used to document your repository, both for your (future) self and for others that might want to use your code. The file is called `README.md` in your repository. The contents of that file is rendered and displayed on the main landing page of your remote repository [github.com](https://github.com/). If you want, you can edit this file within something like notepad, commit the change, and push your changes to the remote repository, and in doing so the description on the public repository online will change.
 
-Here, we want to practice a **pull**. This is the opposite of a **push**. Instead of **pushing** changes from our local machine to the remote repository on [github.com](https://github.com/)) we can **pull** changes that exist on the remote but not on our local machine. To practice this, we are going to edit our README on the remote repository, and then **pull** those changes so that we have them no our local machine. Click on the edit button of the README.
+Here, we want to practice a **pull**. This is the opposite of a **push**. Instead of **pushing** changes from our local machine to the remote repository on [github.com](https://github.com/) we can **pull** changes that exist on the remote but not on our local machine. To practice this, we are going to edit our README on the remote repository, and then **pull** those changes so that we have them on our local machine. Click the edit button of the README on the remote repository web page.
 
 <center>
 
@@ -186,7 +186,7 @@ Here, we want to practice a **pull**. This is the opposite of a **push**. Instea
 
 </center>
 
-Make some changes to the file. Note that it uses [markdown](https://www.markdownguide.org/basic-syntax/) syntax, although you don't need to know markdown to make an edit. Add some details to your README and then click `Commit changes` (in green). When you make changes directly to the remote, you don't need to **push** anything. The commit on its own is enough to change the contents of the remote repository.
+Make some changes to the file. Note that it uses [markdown](https://www.markdownguide.org/basic-syntax/) syntax, although you don't need to know markdown to make an edit. Add some details to your README and then click `Commit changes` (in green). When you make changes directly to the remote repository on [github.com](https://github.com/), you don't need to **push** anything. The commit on its own is enough to change the contents of the remote repository.
 
 <center>
 
@@ -212,7 +212,7 @@ We will then be notified that there's been a change on the remote (i.e., our edi
 
 If you now check your `README.md` on your local repository, you should now see any changes that were made on the remote repository. You will also notice that your `History` tab has been updated with the commit we made directly to the remote.
 
-In practice, most things that we **pull** from the remote repository are changes that someone else has made to the remote, such as adding some new code to our script. If Person A pushes some new code to the remote repository, then Person B can then pull their changes to their local machine, for further edits or testing. We cover this during an exercise later. 
+In practice, most things that we **pull** from the remote repository are changes that someone else has made to the remote via a commit and push on their own machine, such as adding some new code to our script. If Person A pushes some new code to the remote repository, then Person B can then pull their changes to their local machine, for further edits or testing. We cover this during an exercise later. 
 
 **Self-study**
 
@@ -230,7 +230,7 @@ Let's say you have a colleague that's really good at making fancy looking ggplot
 
 </center>
 
-Your colleague will now get an invite to be a collaborator, which we hope they will enthusiastically accept. Once they do, your colleague will need to **clone** your remote repository onto their local machine. You can do this by clicking `File / Clone repository`.
+Your colleague will now get an invite to be a collaborator, which we hope they will enthusiastically accept. But even then, they do not have any of your data and code. No, don't email it to them... Instead, your colleague can **clone** your remote repository onto their local machine. You can do this by clicking `File / Clone repository` within GitHub Desktop. Before doing this, make sure you've pushed all your local changes to the remote, so that your colleague is getting the latest version of your project.
 
 <center>
 
