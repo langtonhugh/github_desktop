@@ -220,7 +220,7 @@ Now you've successfully pulled changes to the README from the remote, have a go 
 
 ## Collaboration exercise
 
-Now you've practiced some stuff on your own, we can extend the exercise to simulate a collaboration with a research colleague. To do this, you will need a colleague! If you can't find a friendly colleague to practice this exercise with, and you're a member of Amsterdam UMC, then we could help you out. Make a request to [RDM Research Software Management via ServiceNow](https://amsterdamumc.service-now.com/esc?id=sc_cat_item&sys_id=6edc44311bea4110f2ae6313604bcbc4), and we will schedule an appointment to help you.
+Now that you've practiced some stuff on your own, we can extend the exercise to simulate a collaboration with a research colleague. To do this, you will need a colleague! If you can't find a friendly colleague to practice this exercise with, and you're a member of Amsterdam UMC, then we could help you out. Make a request to [RDM Research Software Management via ServiceNow](https://amsterdamumc.service-now.com/esc?id=sc_cat_item&sys_id=6edc44311bea4110f2ae6313604bcbc4), and we will schedule an appointment to help you.
 
 Let's say you have a colleague that's really good at making fancy looking ggplots. You want them to contribute to the script in your repository. A straightforward way of doing this is to add them as a collaborator. On the repository webpage at [github.com](https://github.com/), click on `Settings` and then `Collaborators`. After going through the two-factor check, click `Add people` and then search for your colleague's GitHub username. Here, I choose my esteemed colleague [Thomas Pronk](https://github.com/tpronk) and click `Add tpronk to this repository`. Obviously, please choose your colleague's username!
 
@@ -248,7 +248,7 @@ Within GitHub Desktop, your colleague will now have a pre-filled window with the
 
 </center>
 
-If all has gone to plan, each of you should now have a version of the research materials (i.e., the `example_project` folder) on your machines. To practice a collaboration, have one of you make some changes to the R script -- edit something, add something or delete something. **Commit** and **push** those changes to the remote. The other person can then **pull** those changes from the remote. Continue doing this for a couple of iterations in order to practice the process.
+If all has gone to plan, each of you should now have a version of the research materials (i.e., the `example_project` folder) on your machines. To practice a collaboration, have one of you make some changes to the R script -- edit something, add something or delete something. **Commit** and **push** those changes to the remote. The other person can then **fetch** and **pull** those changes from the remote. Continue doing this for a couple of iterations in order to practice the process.
 
 So far, you have been taking turns editing the same code chunk. In reality, you might not know when your colleague is working on the R script. What happens if you edit the same chunk of code and attempt to push those changes to the remote repository? You might get a warning message about a **conflict**. These conflicts need to be resolved before pushing. We don't cover conflicts in detail during this workshop but I would recommend [this video](https://www.youtube.com/watch?v=MIVW0sijSjY) for a concise summary. Note that the example does not use R, but the principle is the same! In practice, there are a couple of ways you can avoid conflicts:
 
