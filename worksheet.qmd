@@ -78,12 +78,13 @@ There are [alternatives](https://www.wearedevelopers.com/magazine/top-github-alt
 
 ### Setup
 
-If you haven't already:
+The following steps are needed to follow along with the exercises:
 
-1. [Sign-up](https://github.com/) to GitHub.
-2. [Download](https://github.com/apps/desktop) GitHub Desktop.
-3. Sign-in to your GitHub account within GitHub Desktop.
-4. [Download the example R project](https://github.com/langtonhugh/github_desktop/raw/refs/heads/main/example_project.zip) that we will work with. Unzip it and place the folder somewhere on your local machine. 
+1. If you haven't already, [download R](https://cran.r-project.org/bin/windows/base/) and then [RStudio](https://posit.co/download/rstudio-desktop/).
+2. [Sign-up](https://github.com/) to GitHub.
+3. [Download](https://github.com/apps/desktop) GitHub Desktop.
+4. Sign-in to your GitHub account within GitHub Desktop.
+5. [Download the example R project](https://github.com/langtonhugh/github_desktop/raw/refs/heads/main/example_project.zip) that we will work with. Unzip it and place the folder somewhere on your local machine. 
 
 ### Adding a project to GitHub Desktop
 
@@ -122,7 +123,7 @@ Then click `Create repository`. You will then get something like the screenshot 
 
 ### Editing a script
 
-How can we tell that we are now using Git for version control? One easy way to check is just to make an edit to your R script. Open up the R project and the `my_analysis.R` script in RStudio. If needed, install the packages required to run the script. You don't actually have to understand or even run the script to follow the exercise, but it will allow you to test things out more if you can get it running. 
+How can we tell that we are now using Git for version control? One easy way to check is just to make an edit to your R script. Open up the R project `example_project.RProj`. If you're not sure what an R project file is you can [read more here](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects). Open the R project file will launch RStudio. Then open the `my_analysis.R` script in the RStudio session. If needed, install the packages required to run the script. You don't actually have to understand or even run the script to follow the exercise, but it will allow you to test things out more if you can get it running. 
 
 Now, make an edit to the R script. This could be a meaningful edit to the code or something trivial like a comment saying "Hello". In my example, I just add some code to change the colour scheme used in the ggplot. What happens in GitHub Desktop? You will see some colourful annotation of your change on the right, and a summary of the files changed (in this case, just `my_analysis.R`) on the left.
 
