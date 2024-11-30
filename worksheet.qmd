@@ -1,7 +1,7 @@
 ---
 title: "GitHub Desktop: Power Hour"
 subtitle: "Research Data Management, Amsterdam UMC"
-author: "Sam Langton"
+author: "Sam Langton & Thomas Pronk"
 date: "2 December, 2024"
 format:
   html:
@@ -18,7 +18,7 @@ editor_options:
 
 ## Preamble
 
-This material is a pilot workshop introducing [GitHub Desktop](https://github.com/apps/desktop) for researchers at [Amsterdam UMC](https://www.amsterdamumc.org/en/research.htm). It is partly based on material produced by [TIB Hannover](https://github.com/TIBHannover/git-desktop). The workshop is a compact, essentials-only session designed for students or researchers with zero familiarity with git/GitHub, but some familiarity with R. 
+This material is a pilot workshop introducing [GitHub Desktop](https://github.com/apps/desktop) for researchers at [Amsterdam UMC](https://www.amsterdamumc.org/en/research.htm). It is partly based on material produced by [TIB Hannover](https://github.com/TIBHannover/git-desktop). The workshop is a compact, essentials-only session designed for students or researchers with zero familiarity with git/GitHub, but some familiarity with R. You can view the source material on the corresponding [repository](https://github.com/langtonhugh/github_desktop).
 
 ## Version control
 
@@ -96,7 +96,7 @@ In this exercise we assume that you have a small, pre-existing project for which
 
 </center>
 
-Currently, nothing we are doing is under version control. No changes are being tracked. If we delete some R code, it's probably gone forever, and we cannot easily compare or restore to a previous version. To begin tracking the project using Git, we can add it to GitHub Desktop using `File / New repository`. A repository is the term for the digital storage space on GitHub that includes your code, data, and documentation. So, typically the repository consists of the folder on your computer containing all your research materials. It's the folder that we want to put under version control.
+Currently, nothing we are doing is under version control. No changes are being tracked. If we delete some R code, it's probably gone forever, and we cannot easily compare or restore to a previous version. To begin tracking the project using Git, we can add it to GitHub Desktop using `File / New repository`. A repository is the term for the digital storage space on GitHub that includes your code and code-related documentation. So, typically the repository consists of the folder on your computer containing all your code-related research materials. It's the folder that we want to put under version control. 
 
 <center>
 
@@ -104,7 +104,7 @@ Currently, nothing we are doing is under version control. No changes are being t
 
 </center>
 
-You will then be prompted to complete some information about the repository. Because we already have a pre-existing folder, the name of the repository is the name of the folder i.e., `example_project`. You can add a short description if you'd like. The `Local path` points GitHub Desktop towards the location of `example_project` (in our case, within the `training` folder). We tick the box for a README, which is where we write the documentation for the project, and then select `R` for the Git ignore. We will cover these two things later! In the example below, we do not select a licence, but by all means select one if you'd like.
+You will then be prompted to complete some information about the repository. Because we already have a pre-existing folder, the name of the repository is the name of the folder i.e., `example_project`. This must match your folder name exactly! You can add a short description if you'd like. The `Local path` points GitHub Desktop towards the location of `example_project` (in our case, within the `training` folder). As you select this, check that the summary at the bottom of the window (where is says `The repository will be created at...`) is accurate! We tick the box for a README, which is where we write the code-related documentation for the project, and then select `R` for the Git ignore. We will cover these two things later! In the example below, we do not select a licence, but by all means select one if you'd like.
 
 <center>
 
@@ -123,9 +123,9 @@ Then click `Create repository`. You will then get something like the screenshot 
 
 ### Editing a script
 
-How can we tell that we are now using Git for version control? One easy way to check is just to make an edit to your R script. Open up the R project `example_project.RProj`. If you're not sure what an R project file is you can [read more here](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects). Open the R project file will launch RStudio. Then open the `my_analysis.R` script in the RStudio session. If needed, install the packages required to run the script. You don't actually have to understand or even run the script to follow the exercise, but it will allow you to test things out more if you can get it running. 
+How can we tell that we are now using Git for version control? One easy way to check is just to make an edit to your R script. Open up the R project `example_project.RProj`. This is the file highlighted in the screenshot of our folder above. If you're not sure what an R project file is you can [read more here](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects). Opening the R project file will launch RStudio. Then open the `my_analysis.R` script in the RStudio session. If needed, install the packages required to run the script. You don't actually have to understand or even run the script to follow the exercise, but it will allow you to test things out more if you can get it running.
 
-Now, make an edit to the R script. This could be a meaningful edit to the code or something trivial like a comment saying "Hello". In my example, I just add some code to change the colour scheme used in the ggplot. What happens in GitHub Desktop? You will see some colourful annotation of your change on the right, and a summary of the files changed (in this case, just `my_analysis.R`) on the left.
+Now, make an edit to the R script. This could be a meaningful edit to the code or something trivial like a comment saying "Hello". In my example, I just add some code to change the palette used in the ggplot. What happens in GitHub Desktop? You will see some red/green annotation of your change on the right, and a summary of the files changed (in this case, just `my_analysis.R`) on the left.
 
 <center>
 
@@ -159,7 +159,7 @@ Back on the `Changes` tab, you will notice a prompt about publishing your reposi
 
 <center>
 
-![](img/publish.png){width="800"}
+![](img/publish.png){width="600"}
 
 </center>
 
@@ -219,6 +219,12 @@ In practice, most things that we **pull** from the remote repository are changes
 
 Now you've successfully pulled changes to the README from the remote, have a go at doing it the other way around. Open up `README.md` in a text editor (e.g., notepad), make some changes, and then **commit** and **push** those changes to the remote.
 
+### Note on data
+
+You will have noticed that our data file `diamonds_data.csv` in the `data` folder is also under version control and is being hosted on the remote GitHub repository. It's worth adding that normally, especially with (potentially sensitive) medical data, the data itself will **not** be a GitHub. This is partly because GitHub repositories have limited storage space, but also because of data privacy. Your data will likely have to be stored on a secure network drive, or if the data is open, on a more data-specific online repository (e.g., [OSF](https://osf.io/)). 
+
+
+
 ## Collaboration exercise
 
 Now that you've practiced some stuff on your own, we can extend the exercise to simulate a collaboration with a research colleague. To do this, you will need a colleague! If you can't find a friendly colleague to practice this exercise with, and you're a member of Amsterdam UMC, then we could help you out. Make a request to [RDM Research Software Management via ServiceNow](https://amsterdamumc.service-now.com/esc?id=sc_cat_item&sys_id=6edc44311bea4110f2ae6313604bcbc4), and we will schedule an appointment to help you.
@@ -237,7 +243,7 @@ Your colleague can make a clone by navigating to your remote repository on [gith
 
 <center>
 
-![](img/clone1.png){width="300"}
+![](img/clone1.png){width="500"}
 
 </center>
 
@@ -270,7 +276,6 @@ Version control is almost always a blessing, but it can also be a curse. If you 
 ## Git within RStudio
 
 We've focused on GitHub Desktop, which means you will be able to use version control with any programming language in exactly the same way as we've covered here. If you are likely to stick with R, you can make use of the built-in Git functionality of RStudio. Assuming you are on a reasonably recent version of RStudio, you will notice this tab in the top right.
-
 
 <center>
 
