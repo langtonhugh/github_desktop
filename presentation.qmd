@@ -1,8 +1,10 @@
 ---
 title: "GitHub Desktop <br>Power Hour"
-author: "Sam Langton & Thomas Pronk"
+author: "Sam Langton & Thomas Pronk <br> Amsterdam UMC"
 subtitle: "2 December 2024"
 format: revealjs
+editor_options: 
+  chunk_output_type: console
 ---
 
 ## Content
@@ -78,13 +80,13 @@ All this, while:
 </center>
 
 
-## GitHub
+<!-- ## GitHub -->
 
-<center>
+<!-- <center> -->
 
-![[Source: Wikicommons](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/600px-Octicons-mark-github.svg.png?20180806170715)](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/600px-Octicons-mark-github.svg.png?20180806170715){width="400"}
+<!-- ![[Source: Wikicommons](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/600px-Octicons-mark-github.svg.png?20180806170715)](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/600px-Octicons-mark-github.svg.png?20180806170715){width="400"} -->
 
-</center>
+<!-- </center> -->
 
 ## GitHub Desktop
 
