@@ -1,0 +1,122 @@
+---
+title: "GitHub Desktop <br>Power Hour"
+author: "Sam Langton & Thomas Pronk"
+subtitle: "2 December 2024"
+format: revealjs
+---
+
+## Content
+
+1. Short presentation
+2. Live demonstration
+3. Further material
+4. Questions
+
+## Version control
+
+<center>
+
+![](img/versioncontrol.png){width="450"}
+
+</center>
+
+<br>
+
+## Version control
+
+Recording changes through snapshots of the same file.
+
+<br>
+
+<center>
+
+![[Source: caltechlibrary](https://caltechlibrary.github.io/git-desktop/01-basics/)](img/play-changes.svg){width="900"}
+
+</center>
+
+## Version control
+
+Collaborating with others on the same file.
+
+<center>
+
+![[Source: caltechlibrary](https://caltechlibrary.github.io/git-desktop/01-basics/)](img/versions.svg){width="500"}
+
+</center>
+
+## Version control
+
+Merging changes from multiple people into one file.
+
+<center>
+
+![[Source: caltechlibrary](https://caltechlibrary.github.io/git-desktop/01-basics/)](img/merge.svg){width="500"}
+
+</center>
+
+## Version control
+
+<br>
+
+All this, while:
+
+- Only having one copy of the file
+- Never losing existing work
+- Able to compare to previous versions
+- Openly available (if wanted) and backed-up
+
+## Clarifying terminology
+
+## Git
+
+<br>
+
+<center>
+
+![[Source: Wikicommons](https://commons.wikimedia.org/wiki/File:Git-logo.svg)](https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg){width="600"}
+
+</center>
+
+
+## GitHub
+
+<center>
+
+![[Source: Wikicommons](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/600px-Octicons-mark-github.svg.png?20180806170715)](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/600px-Octicons-mark-github.svg.png?20180806170715){width="400"}
+
+</center>
+
+## GitHub Desktop
+
+<center>
+
+![[Source: github.com](https://github.com/desktop/desktop/issues/10855)](https://user-images.githubusercontent.com/1784648/97818784-c4fc1080-1ca4-11eb-8681-56ec3fa21756.png){width="400"}
+
+</center>
+
+## Live demonstration
+
+<br>
+
+<br>
+
+<center>
+
+[https://rpubs.com/langton_/githubdesktop](https://rpubs.com/langton_/githubdesktop)
+
+</center>
+
+## Thanks for listening!
+
+<Br>
+
+**Want further help?**
+
+Make a ticket on ServiceNow under [RDM Research Software Management](https://amsterdamumc.service-now.com/esc?id=sc_cat_item&sys_id=6edc44311bea4110f2ae6313604bcbc4).
+
+<br>
+
+**Interested more in R?**
+
+Join the [R user group](https://langtonhugh.github.io/rum_umc/) by emailing Sam (s.h.langton@amsterdamumc.nl).
+
